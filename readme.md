@@ -98,7 +98,8 @@ export PYTHONPATH='.' && python src/main.py
 - Volgograd,44.4833,48.7
 - Yekaterinburg,60.6128,56.8356
 - Novosibirsk,82.9167,55.0333
-- Vladivostok,131.9,43.1167	Voronezh,39.2106,51.6717
+- Vladivostok,131.9,43.1167
+- Voronezh,39.2106,51.6717
 - Belgorod,36.6,50.6
 - Kazan,49.1144,55.7908
 - Bryansk,34.3667,53.25
