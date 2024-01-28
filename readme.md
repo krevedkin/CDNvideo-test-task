@@ -19,7 +19,7 @@
 
 - Установленный **git**
 - Установленный **Python 3.10+**
-- API токен созданный на сайте https://api-ninjas.com/api/city (если необходимо я вышлю свой напишите мне в [Telegram](https://t.me/krvdkrvd)
+- API токен созданный на сайте https://api-ninjas.com/api/city (если необходимо я вышлю свой напишите мне в [Telegram](https://t.me/krvdkrvd))
 ## Установка и запуск
 
 1. Склонировать репозиторий
@@ -82,7 +82,9 @@ python src/main.py
 8. Приложение будет запущено и доступно по адресу http://localhost:8000
 
  База данных будет наполнена данными следующих городов:
+ 
  **name | longitude | latitude**
+
 - Moscow,37.6178,55.7558	
 - Saint Petersburg,30.3167,59.95
 - Rostov,39.7167,47.2333
@@ -171,8 +173,8 @@ request body:
 Получить 2 ближайших города по заданным координатам широты и долготы
 
 Query params:
-**longitude** - долгота (float или int)
-**latitude** - широта (float или int) в диапазоне [-90; 90]
+- **longitude** - долгота (float или int)
+- **latitude** - широта (float или int) в диапазоне [-90; 90]
 
 Пример ответа 200:
 > [
