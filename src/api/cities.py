@@ -56,7 +56,7 @@ async def add_city(request: Request) -> Response:
     except HttpClientError as e:
         raise HTTPInternalServerError(reason=e.args[0])
 
-    return json_response({"ok": True})
+    return json_response({"ok": True}, status=201)
 
 
 @router.delete("/city/{name}")
@@ -70,7 +70,7 @@ async def delete_city(request: Request) -> Response:
     if not deleted_city:
         raise HTTPNotFound(reason="City not found")
 
-    return json_response({"ok": True})
+    return json_response(status=204)
 
 
 @router.get("/cities/nearest")
