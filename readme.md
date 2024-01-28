@@ -24,87 +24,88 @@
 
 1. Склонировать репозиторий
 
-> git clone https://github.com/krevedkin/CDNvideo-test-task.git
+```
+git clone https://github.com/krevedkin/CDNvideo-test-task.git
+```
 
 2. Создать виртуальное окружение
 
-> virtualenv venv
+```
+virtualenv venv
+```
 
 3. Активировать виртуальное окружение
 
-> source venv/bin/activate
+```
+ source venv/bin/activate
+```
 
 4. Установить зависимости
 
-> pip install -r requirements.txt
+```
+ pip install -r requirements.txt
+```
 
-6. В корне проекта в файле .env добавить значение для переменной окружения CITIES_API_TOKEN (при отсутствующем значении
+5. В корне проекта в файле **.env** добавить значение для переменной окружения **CITIES_API_TOKEN** (при отсутствующем
+   значении
    переменной приложение вызовет исключение при запуске)
 
-> CITIES_API_TOKEN="your_api_token"
+```
+ CITIES_API_TOKEN="your_api_token"
+```
 
-7. Находясь в корне проекта выполнить команду для запуска приложения
+6. Находясь в корне проекта выполнить команду для запуска приложения
 
-> bash run.sh
+```
+bash run.sh
+```
 
 Если по каким то причинам пункт 7 не сработал, сделать следующие действия
 
 - Создать в корне проекта файл базы данных SQlite с именем **database.db**
 
-> touch database.db
+```
+touch database.db
+```
 
 - Провести миграции
 
-> alembic upgrade head
+```
+alembic upgrade head
+```
 
 - Запустить проект
 
-> python src/main.py
-
-### База данных будет наполнена данными следующих городов:
-
-> **name | longitude | latitude**
-> Moscow,37.6178,55.7558
-
-> Saint Petersburg,30.3167,59.95
-
-> Rostov,39.7167,47.2333
-
-> Volgograd,44.4833,48.7
-
-> Yekaterinburg,60.6128,56.8356
-
-> Novosibirsk,82.9167,55.0333
-
-> Vladivostok,131.9,43.1167
-
-> Voronezh,39.2106,51.6717
-
-> Belgorod,36.6,50.6
-
-> Kazan,49.1144,55.7908
-
-> Bryansk,34.3667,53.25
-
-> Sochi,39.7203,43.5853
-
-> Krasnodar,38.9833,45.0333
-
-> Petropavlovsk,158.65,53.0167
-
-> Omsk,73.3833,54.9667
-
-> Chita,-97.3442,37.6896
-
-> Murmansk,33.0833,68.9667
-
-> Novgorod,44.0075,56.3269
-
-> Orenburg,55.1,51.7667
-
-> Chelyabinsk,61.4,55.15
+```
+python src/main.py
+```
 
 8. Приложение будет запущено и доступно по адресу http://localhost:8000
+
+[!NOTE]
+> База данных будет наполнена данными следующих городов:
+>
+> **name | longitude | latitude**
+> Moscow,37.6178,55.7558
+> Saint Petersburg,30.3167,59.95
+> Rostov,39.7167,47.2333
+> Volgograd,44.4833,48.7
+> Yekaterinburg,60.6128,56.8356
+> Novosibirsk,82.9167,55.0333
+> Vladivostok,131.9,43.1167
+> Voronezh,39.2106,51.6717
+> Belgorod,36.6,50.6
+> Kazan,49.1144,55.7908
+> Bryansk,34.3667,53.25
+> Sochi,39.7203,43.5853
+> Krasnodar,38.9833,45.0333
+> Petropavlovsk,158.65,53.0167
+> Omsk,73.3833,54.9667
+> Chita,-97.3442,37.6896
+> Murmansk,33.0833,68.9667
+> Novgorod,44.0075,56.3269
+> Orenburg,55.1,51.7667
+> Chelyabinsk,61.4,55.15
 
 # Документация эндпойнтов
 
