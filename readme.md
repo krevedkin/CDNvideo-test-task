@@ -15,6 +15,13 @@
 
 Реализация хранилища произвольная.
 
+## Используемый стэк
+- Python 3.10
+- aiohttp
+- SQlite
+- SQLalchemy + alembic + aiosqlite
+- Pydantic 
+- geopy
 ## Требования перед установкой
 
 - Установленный **git**
