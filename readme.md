@@ -83,7 +83,7 @@ alembic upgrade head
 - Запустить проект
 
 ```
-python src/main.py
+export PYTHONPATH='.' && python src/main.py
 ```
 
 8. Приложение будет запущено и доступно по адресу http://localhost:8000
