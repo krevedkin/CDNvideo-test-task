@@ -26,7 +26,7 @@ class CityManager:
 
     @staticmethod
     async def get_city(name: str) -> CityGetSchema | None:
-        city = await CityDao.get(name=name)
+        city = await CityDao.get(name=name.capitalize())
 
         if not city:
             raise CityNotFoundError("Not found")

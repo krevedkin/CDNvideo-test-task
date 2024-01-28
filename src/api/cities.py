@@ -44,6 +44,7 @@ async def get_city(request: Request) -> Response:
 async def add_city(request: Request) -> Response:
     try:
         data = await request.json()
+        data["name"] = data["name"].capitalize() if data.get("name") else None
         await CityManager.create_city(CityCreateSchema(**data))
     except JSONDecodeError:
         raise HTTPBadRequest(reason="provide valid json")
