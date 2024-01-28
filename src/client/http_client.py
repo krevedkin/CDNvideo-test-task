@@ -1,6 +1,6 @@
 import aiohttp
 
-from src.config import Config
+from src.config import config
 from src.schemas.city import Coordinates
 
 
@@ -17,7 +17,7 @@ class HttpClient:
     async def get_coords_data(city_name: str) -> Coordinates:
         async with aiohttp.ClientSession() as session:
             async with session.get(
-                Config.CITIES_API_URL + f"/city?name={city_name}", headers={"X-Api-Key": Config.CITIES_API_TOKEN}
+                config.CITIES_API_URL + f"/city?name={city_name}", headers={"X-Api-Key": config.CITIES_API_TOKEN}
             ) as resp:
                 if not resp.ok:
                     raise HttpClientError(
