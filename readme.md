@@ -120,12 +120,12 @@ export PYTHONPATH='.' && python src/main.py
 Получить список всех городов
 
 Пример ответа 200:
-> {
+> [{
 "id":  1,
 "name":  "Moscow",
 "longitude":  37.6178,
 "latitude":  55.7558
-> },
+> }],
 
 ## GET /city/:name
 
